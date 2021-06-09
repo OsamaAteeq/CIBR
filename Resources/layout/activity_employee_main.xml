@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout1">
+    <TextView
+        android:text="Employee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:gravity="center"
+        android:id="@+id/txt_welcome"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="EmployeeID"
+        android:id="@+id/box_employee_id"/>
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="BranchID"
+        android:id="@+id/box_branch_id"/>
+
+    <EditText
+        android:inputType="numberPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pass Code"
+        android:id="@+id/box_pass_code" />
+    <TextView
+        android:text="Incase of forgotten details contact admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_forgot_details" />
+
+    <TextView
+        android:text="Incorrect details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#ffff1744"
+        android:visibility="gone"
+        android:id="@+id/txt_incorrect" />
+    <Button
+        android:text="Sign in"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/btn_signin"
+        android:layout_marginTop="20dp"
+        android:textSize="30dp" />
+
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout1">
+
+        <TextView
+            android:text="Apply Now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:textColor="#ff64b5f6"
+            android:id="@+id/txt_employee" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout1">
+    <TextView
+        android:text="FORGOT USERNAME"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:id="@+id/txt_welcome"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ENTER CNIC"
+        android:maxLength="13"
+        android:id="@+id/box_cnic"/>
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Debit Card Number"
+        android:maxLength="16"
+        android:id="@+id/box_debitcard_number"/>
+    <EditText
+        android:inputType="numberPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="4"
+        android:hint="Debit Card Pin"
+        android:id="@+id/box_debitcard_pin"/>
+    <TextView
+        android:text="Incorrect CNIC or debit card information!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#ffff1744"
+        android:visibility="gone"
+        android:id="@+id/txt_incorrect" />
+
+    <Button
+        android:text="Next"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/btn_next"
+        android:layout_marginTop="20dp"
+        android:textSize="30dp" />
+
+
+</LinearLayout>

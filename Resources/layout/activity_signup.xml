@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout1">
+    <TextView
+        android:text="SIGN UP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:id="@+id/txt_welcome"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:id="@+id/box_username"/>
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="CNIC"
+        android:maxLength="13"
+        android:id="@+id/box_cnic"/>
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Debit Card Number"
+        android:maxLength="16"
+        android:id="@+id/box_debitcard_number"/>
+    <EditText
+        android:inputType="numberPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="4"
+        android:hint="Debit Card Pin"
+        android:id="@+id/box_debitcard_pin"/>
+    <EditText
+        android:inputType="numberPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:id="@+id/box_password" />
+    <EditText
+        android:inputType="numberPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirm Password"
+        android:id="@+id/box_confirm_password" />
+
+    <TextView
+        android:text="Username can not have spaces!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#ffff1744"
+        android:visibility="gone"
+        android:id="@+id/txt_no_space" />
+    <TextView
+        android:text="Password mismatch!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#ffff1744"
+        android:visibility="gone"
+        android:id="@+id/txt_password_mismatch" />
+    <TextView
+        android:text="CNIC not found."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#ffff1744"
+        android:visibility="gone"
+        android:id="@+id/txt_cnic_not_found" />
+    <TextView
+        android:text="Incorrect debitcard information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#ffff1744"
+        android:visibility="gone"
+        android:id="@+id/txt_incorrect_debitcard" />
+    <TextView
+        android:text="Username and Password must have 8 or more digits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#ffff1744"
+        android:visibility="gone"
+        android:id="@+id/txt_incorrect_length" />
+    <Button
+        android:text="Sign up"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/btn_signup"
+        android:layout_marginTop="20dp"
+        android:textSize="30dp" />
+    
+</LinearLayout>

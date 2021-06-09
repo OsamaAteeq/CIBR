@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout1">
+    <TextView
+        android:text="ENTER OTP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:id="@+id/txt_welcome"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/linearLayout2">
+        <EditText
+            android:inputType="numberPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:nextFocusRight="@+id/box_otp2"
+            android:maxLength="1"
+            android:id="@+id/box_otp1" />
+        <EditText
+            android:inputType="numberPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:maxLength="1"
+            android:nextFocusRight="@+id/box_otp3"
+            android:id="@+id/box_otp2" />
+        <EditText
+            android:inputType="numberPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:maxLength="1"
+            android:nextFocusRight="@+id/box_otp4"
+            android:id="@+id/box_otp3" />
+        <EditText
+            android:inputType="numberPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:maxLength="1"
+            android:nextFocusRight="@+id/box_otp5"
+            android:id="@+id/box_otp4" />
+        <EditText
+            android:inputType="numberPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:maxLength="1"
+            android:nextFocusRight="@+id/box_otp6"
+            
+            android:id="@+id/box_otp5" />
+        <EditText
+            android:inputType="numberPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:maxLength="1"
+            android:nextFocusDown="@+id/btn_enter"
+            android:id="@+id/box_otp6" />
+
+
+    </LinearLayout>
+    <TextView
+        android:text="Incorrect OTP!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#ffff1744"
+        android:visibility="gone"
+        android:id="@+id/txt_incorrect" />
+
+    <Button
+        android:text="ENTER"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/btn_enter"
+        android:layout_marginTop="20dp"
+        android:textSize="30dp" />
+    <TextView
+        android:text="60"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/txt_time" />
+   
+
+
+</LinearLayout>
