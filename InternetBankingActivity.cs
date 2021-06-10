@@ -22,7 +22,25 @@ namespace CIBR
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            int card_at = 0;
+            int account_at = 0;
             string cnic = Intent.GetStringExtra("CNIC");
+            for (int i = 0; i < Global.client.Count; i++) 
+            {
+                if (Global.client[i][1].Equals(cnic)) 
+                {
+                    card_at = i;
+                    break;
+                }
+            }
+            for (int i = 0; i < Global.account.Count; i++)
+            {
+                if (Global.account[i][1].Equals(cnic))
+                {
+                    account_at = i;
+                    break;
+                }
+            }
 
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
