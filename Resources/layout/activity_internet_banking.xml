@@ -37,7 +37,59 @@
         android:layout_height="wrap_content"
  
         android:id="@+id/searchView1" />
+    <GridLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="25dp"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:id="@+id/gridLayout1" >
+        <Button
+            android:text="Account"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            
+            android:layout_marginRight="25dp"
+            android:id="@+id/button1" />
+        <Button
+            android:text="Funds\n"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_marginRight="25dp"
+            android:id="@+id/button2" />
+        <Button
+            android:text="Button"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:id="@+id/button3" />
+        <Button
+            android:text="Button"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_columnSpan="2"
+            android:layout_rowSpan="2"
+            android:layout_marginRight="25dp"
+            android:id="@+id/button4" />
+        <Button
+            android:text="Button"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:id="@+id/button5" />
+        <Button
+            android:text="Button"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:id="@+id/button6" />
+       
 
-   
+        
+        
 
+        
+    </GridLayout>
 </LinearLayout>

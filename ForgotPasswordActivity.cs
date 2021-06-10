@@ -57,42 +57,43 @@ namespace CIBR
                             at = i;
                         }
                     }
-                    string cnic = Global.client[at][0];
-                    if (at != 0) 
+
+                    if (at != -1)
                     {
-                        for (int i = 0; i < Global.card.Count; i++) 
+                        string cnic = Global.client[at][0];
+                        for (int i = 0; i < Global.card.Count; i++)
                         {
-                            if (Global.card[i][1].Equals(cnic)) 
+                            if (Global.card[i][1].Equals(cnic))
                             {
                                 at = i;
                             }
                         }
-                    }
-                    else
-                        txt_incorrect.Visibility = Android.Views.ViewStates.Visible;
 
-                    if (Global.card[at][0].Equals(box_debitcard_number.Text.ToString()) && Global.card[at][3].Equals(box_debitcard_pin.Text.ToString()))
-                    {
-                        /*
-                            if(username not found || debitcard number not match || debitcard pin deoesnt match)
-                                txt_incorrect.Visibility = Android.Views.ViewStates.Visible;
-                            else
-                                {
-                        */
-                        //CODE FOR DEMONSTRATION: 
-                        System.Console.WriteLine("\n\n\n\n\n\n\nOTP : " + rndm); //SUPPOSED TO BE A MESSAGE
-                        var OTPActivity = new Intent(this, typeof(OTPActivity));
-                        OTPActivity.PutExtra("OTP", rndm);
-                        StartActivity(OTPActivity);
-                        /*
-                                }
-                        */
+
+                        if (Global.card[at][0].Equals(box_debitcard_number.Text.ToString()) && Global.card[at][3].Equals(box_debitcard_pin.Text.ToString()))
+                        {
+                            /*
+                                if(username not found || debitcard number not match || debitcard pin deoesnt match)
+                                    txt_incorrect.Visibility = Android.Views.ViewStates.Visible;
+                                else
+                                    {
+                            */
+                            //CODE FOR DEMONSTRATION: 
+                            System.Console.WriteLine("\n\n\n\n\n\n\nOTP : " + rndm); //SUPPOSED TO BE A MESSAGE
+                            var OTPActivity = new Intent(this, typeof(OTPActivity));
+                            OTPActivity.PutExtra("OTP", rndm);
+                            StartActivity(OTPActivity);
+                            /*
+                                    }
+                            */
+                        }
+                        else
+                            txt_incorrect.Visibility = Android.Views.ViewStates.Visible;
                     }
                     else
                         txt_incorrect.Visibility = Android.Views.ViewStates.Visible;
                 }
-                else
-                    txt_incorrect.Visibility = Android.Views.ViewStates.Visible;
+               
             };
             txt_forgot_username.Click += (o, e) =>
             StartActivity(typeof(ForgotUsernameActivity));

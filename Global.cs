@@ -13,6 +13,7 @@ namespace CIBR
 {
     class Global
     {
+        public static int count = 0;
         /*client
         * CNIC1            CNIC2           CNIC3           CNIC4    ............
         * first_name
