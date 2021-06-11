@@ -252,10 +252,7 @@ namespace CIBR
                 int pin = 4321;
                 for (int i = 0; i < Global.account.Count; i++)
                 {
-                    card_number += 1;
-                    c += 1;
-                    vin += 1;
-                    pin--;
+                    
                     Global.card1.Add(card_number.ToString());
                     Global.card1.Add(c.ToString());
                     Global.card1.Add(vin.ToString());
@@ -263,6 +260,10 @@ namespace CIBR
 
                     Global.card.Add(Global.card1.ToList());
                     Global.card1.Clear();
+                    card_number += 1;
+                    c += 1;
+                    vin += 1;
+                    pin--;
                 }
 
                 Global.count++;
