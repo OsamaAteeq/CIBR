@@ -84,7 +84,7 @@ namespace CIBR
                 {
                     txt_incorrect_debitcard.Visibility = Android.Views.ViewStates.Visible;
                 }
-                else if (!Global.card[card_at][1].Equals(Global.client[client_at][0])) 
+                else if (!Global.card[card_at][1].Equals(Global.client[client_at][0]))
                 {
                     same = false;
                     txt_incorrect_debitcard.Visibility = Android.Views.ViewStates.Visible;
@@ -116,9 +116,15 @@ namespace CIBR
                     {
                         Global.client[client_at][5] = box_username.Text;
                         Global.client[client_at][6] = box_password.Text;
-                        System.Console.WriteLine("YOUR internet banking account has been created. Do NOT share your user name or password with anyone");
+                        System.Console.WriteLine("Your internet banking account has been created. Do NOT share your user name or password with anyone");
+                        StartActivity(typeof(MainActivity));
                     }
 
+                }
+                else
+                {
+                    System.Console.WriteLine("Your account already exists. If you are not trying to make an account please contact support");
+                    StartActivity(typeof(MainActivity));
                 }
                 
 
