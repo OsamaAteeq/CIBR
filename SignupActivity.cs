@@ -90,7 +90,7 @@ namespace CIBR
                     txt_incorrect_debitcard.Visibility = Android.Views.ViewStates.Visible;
                 }
 
-                else if (!Global.client[client_at][5].Equals(""))
+                else if (!Global.client[client_at][5].Equals("*"))
                 {
 
                     if (!box_confirm_password.Text.ToString().Equals(box_password.Text.ToString()))

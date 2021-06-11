@@ -37,8 +37,8 @@ namespace CIBR
                 Global.client1.Add("Ateeq");
                 Global.client1.Add("M");
                 Global.client1.Add("03618604568");
-                Global.client1.Add("");
-                Global.client1.Add("");
+                Global.client1.Add("*");
+                Global.client1.Add("*");
 
                 Global.client.Add(Global.client1.ToList());
                 Global.client1.Clear();
@@ -80,8 +80,8 @@ namespace CIBR
                 Global.client1.Add("Atiq");
                 Global.client1.Add("M");
                 Global.client1.Add("03418302568");
-                Global.client1.Add("");
-                Global.client1.Add("");
+                Global.client1.Add("*");
+                Global.client1.Add("*");
 
                 Global.client.Add(Global.client1.ToList());
                 Global.client1.Clear();
@@ -91,8 +91,8 @@ namespace CIBR
                 Global.client1.Add("Rehman");
                 Global.client1.Add("F");
                 Global.client1.Add("03648305598");
-                Global.client1.Add("");
-                Global.client1.Add("");
+                Global.client1.Add("*");
+                Global.client1.Add("*");
 
                 Global.client.Add(Global.client1.ToList());
                 Global.client1.Clear();
@@ -113,8 +113,8 @@ namespace CIBR
                 Global.client1.Add("Khan");
                 Global.client1.Add("F");
                 Global.client1.Add("03633355598");
-                Global.client1.Add("");
-                Global.client1.Add("");
+                Global.client1.Add("*");
+                Global.client1.Add("*");
 
                 Global.client.Add(Global.client1.ToList());
                 Global.client1.Clear();
@@ -135,8 +135,8 @@ namespace CIBR
                 Global.client1.Add("Imran");
                 Global.client1.Add("F");
                 Global.client1.Add("03191629460");
-                Global.client1.Add("");
-                Global.client1.Add("");
+                Global.client1.Add("*");
+                Global.client1.Add("*");
 
                 Global.client.Add(Global.client1.ToList());
                 Global.client1.Clear();
