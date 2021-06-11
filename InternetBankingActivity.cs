@@ -86,6 +86,10 @@ namespace CIBR
 
             txt_log_out = FindViewById<TextView>(Resource.Id.txt_log_out);
 
+            txt_card_number.Text = Global.card[card_at][0].Substring(0,4) + " "+ Global.card[card_at][0].Substring(4, 4) + " " + Global.card[card_at][0].Substring(8, 4) + " " + Global.card[card_at][0].Substring(12, 4);
+            txt_balance.Text = "RS. "+Global.balance[card_at].ToString();
+            txt_transaction_amount.Text = "RS. " + transaction_amount;
+
             txt_log_out.Click += (o, e) =>
             {
                 StartActivity(typeof(MainActivity));

@@ -241,9 +241,9 @@ namespace CIBR
                 int bal = 50000;
                 for (int i = 0; i < Global.account.Count; i++)
                 {
-                    Global.balance.Add(bal);
                     bal += new Random().Next(0, 30000);
                     bal -= new Random().Next(0, 30000);
+                    Global.balance.Add(bal);
                 }
 
                 long card_number = 1234567890123456;

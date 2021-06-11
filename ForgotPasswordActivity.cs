@@ -82,6 +82,7 @@ namespace CIBR
                             System.Console.WriteLine("\n\n\n\n\n\n\nOTP : " + rndm); //SUPPOSED TO BE A MESSAGE
                             var OTPActivity = new Intent(this, typeof(OTPActivity));
                             OTPActivity.PutExtra("OTP", rndm);
+                            OTPActivity.PutExtra("USERNAME", box_username.Text);
                             StartActivity(OTPActivity);
                             /*
                                     }

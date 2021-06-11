@@ -31,6 +31,8 @@ namespace CIBR
         protected override void OnCreate(Bundle savedInstanceState)
         {
             string otp = Intent.GetStringExtra("OTP");
+            string user_name = Intent.GetStringExtra("USERNAME");
+
             System.Console.WriteLine("\n\n\n\n\n\n\nOTP : " + otp); //DISPLAY AGAIN
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
@@ -81,6 +83,14 @@ namespace CIBR
                     if (entered.Equals(otp))
                     {
                         System.Console.WriteLine(rndm);
+                        for (int i = 0; i < Global.client.Count; i++) 
+                        {
+                            if (user_name.Equals(Global.client[i][5])) 
+                            {
+                                Global.client[i][6] = rndm;
+                                break;
+                            }
+                        }
                         StartActivity(typeof(MainActivity));
                     }
                     else
