@@ -19,12 +19,21 @@ namespace CIBR
         }
 
         TextView txt_log_out;
+        TextView txt_balance;
+        TextView txt_card_number;
+        TextView txt_transaction_amount;
+        TextView txt_see_all;
+        SearchView searchView1;
+
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             int card_at = 0;
             int account_at = 0;
+            int transaction_at = -1;
+            string transaction_amount;
             string cnic = Intent.GetStringExtra("CNIC");
+
             for (int i = 0; i < Global.client.Count; i++) 
             {
                 if (Global.client[i][1].Equals(cnic)) 
@@ -42,10 +51,38 @@ namespace CIBR
                 }
             }
 
+            if (Global.transaction.Count > 0)
+            {
+                for (int i = Global.transaction.Count - 1; i >= 0; i++)
+                {
+                    if (Global.transaction[i][2].Equals(Global.account[account_at][0]))
+                    {
+                        transaction_at = i;
+                        break;
+                    }
+                }
+            }
+
+            if (transaction_at == -1)
+            {
+                transaction_amount = Global.balance[card_at].ToString();
+            }
+            else 
+            {
+                transaction_amount = Global.transaction[transaction_at][3];
+            }
+
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_internet_banking);
+
+            txt_balance = FindViewById<TextView>(Resource.Id.txt_balance);
+            txt_card_number = FindViewById<TextView>(Resource.Id.txt_card_number);
+            txt_transaction_amount = FindViewById<TextView>(Resource.Id.txt_transaction_amount);
+            txt_see_all = FindViewById<TextView>(Resource.Id.txt_see_all);
+
+            searchView1 = FindViewById<SearchView>(Resource.Id.searchView1);
 
             txt_log_out = FindViewById<TextView>(Resource.Id.txt_log_out);
 

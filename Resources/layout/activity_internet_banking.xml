@@ -102,6 +102,7 @@
             android:layout_rowWeight="1"
             android:backgroundTint="#ff001c58"
             android:id="@+id/btn_mobile_recharge" />
+        
         <LinearLayout
             android:orientation="horizontal"
             android:minWidth="25px"
@@ -110,7 +111,7 @@
             android:layout_rowWeight="1"
             android:background="#ffffffff"
             android:minHeight="25px"
-            android:id="@+id/linearLayout2"
+            android:id="@+id/linearLayout2">
 
             <TextView
                 android:textAppearance="?android:attr/textAppearanceSmall"
@@ -137,7 +138,6 @@
                     android:id="@+id/txt_transaction"
                     android:textColor="#ff000000" />
                 <TextView
-                    android:text="Small Text"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:layout_width="wrap_content"
                     android:layout_gravity="right"
@@ -150,9 +150,11 @@
                     android:layout_width="wrap_content"
                     android:layout_gravity="right"
                     android:layout_height="wrap_content"
-                    android:textColor="#ff64b5f6"/>
-            </LinearLayout>
-        </LinearLayout>
+                    android:textColor="#ff64b5f6"
+                    android:id="@+id/txt_see_all"/>
+
+            </LinearLayout3>
+        </LinearLayout2>
 
     </GridLayout>
 
