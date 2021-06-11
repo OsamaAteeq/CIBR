@@ -13,6 +13,12 @@ namespace CIBR
 
     public class OTPActivity : AppCompatActivity
     {
+        Timer timer;
+        public override void OnBackPressed()
+        {
+            timer.Stop();
+            base.OnBackPressed();
+        }
         private string rndm = new Random().Next(0, 99999999).ToString("D8");
         EditText box_otp1;
         EditText box_otp2;
@@ -27,6 +33,7 @@ namespace CIBR
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+
             string otp = Intent.GetStringExtra("OTP");
             string user_name = Intent.GetStringExtra("USERNAME");
 
@@ -48,7 +55,7 @@ namespace CIBR
             txt_time = FindViewById<TextView>(Resource.Id.txt_time);
             txt_incorrect = FindViewById<TextView>(Resource.Id.txt_incorrect);
 
-            Timer timer = new Timer();
+            timer = new Timer();
             timer.Interval = 1000;
             int count = 60;
             timer.Elapsed += Timer_Elapsed;
