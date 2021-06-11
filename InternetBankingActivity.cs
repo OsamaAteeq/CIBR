@@ -10,7 +10,7 @@ using System;
 namespace CIBR
 {
 
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = false , NoHistory = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = false)]
     public class InternetBankingActivity : AppCompatActivity
     {
         public override void OnBackPressed()
@@ -93,6 +93,55 @@ namespace CIBR
             txt_log_out.Click += (o, e) =>
             {
                 StartActivity(typeof(MainActivity));
+            };
+
+            txt_see_all.Click += (o, e) =>
+            {
+                var TransactionActivity = new Intent(this, typeof(TransactionActivity));
+                TransactionActivity.PutExtra("IBAN", Global.account[account_at][0]);
+                StartActivity(TransactionActivity);
+            };
+
+            FindViewById<Button>(Resource.Id.btn_account).Click += (o, e) => 
+            {
+                var AccountActivity = new Intent(this, typeof(AccountActivity));
+                AccountActivity.PutExtra("account_at", account_at);
+                StartActivity(AccountActivity);
+            };
+
+            FindViewById<Button>(Resource.Id.btn_bill_payment).Click += (o, e) =>
+            {
+                var BillActivity = new Intent(this, typeof(BillActivity));
+                BillActivity.PutExtra("account_at", account_at);
+                StartActivity(BillActivity);
+            };
+            
+            FindViewById<Button>(Resource.Id.btn_check_investments).Click += (o, e) =>
+            {
+                var InvestmentActivity = new Intent(this, typeof(InvestmentActivity));
+                InvestmentActivity.PutExtra("account_at", account_at);
+                StartActivity(InvestmentActivity);
+            };
+
+            FindViewById<Button>(Resource.Id.btn_funds_transfer).Click += (o, e) =>
+            {
+                var FundsTransferActivity = new Intent(this, typeof(FundsTransferActivity));
+                FundsTransferActivity.PutExtra("account_at", account_at);
+                StartActivity(FundsTransferActivity);
+            };
+
+            FindViewById<Button>(Resource.Id.btn_manage_insurance).Click += (o, e) =>
+            {
+                var InsuranceActivity = new Intent(this, typeof(InsuranceActivity));
+                InsuranceActivity.PutExtra("account_at", account_at);
+                StartActivity(InsuranceActivity);
+            };
+
+            FindViewById<Button>(Resource.Id.btn_mobile_recharge).Click += (o, e) =>
+            {
+                var MobileRechargeActivity = new Intent(this, typeof(MobileRechargeActivity));
+                MobileRechargeActivity.PutExtra("account_at", account_at);
+                StartActivity(MobileRechargeActivity);
             };
 
         }
