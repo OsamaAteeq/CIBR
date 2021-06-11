@@ -16,7 +16,7 @@ namespace CIBR
         Timer timer;
         public override void OnBackPressed()
         {
-            timer = null;
+            timer.Stop();
             base.OnBackPressed();
         }
         private string rndm = new Random().Next(0, 99999999).ToString("D8");
@@ -95,6 +95,7 @@ namespace CIBR
                                 break;
                             }
                         }
+                        timer.Stop();
                         StartActivity(typeof(MainActivity));
                     }
                     else
