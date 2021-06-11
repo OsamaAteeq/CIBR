@@ -14,9 +14,10 @@ namespace CIBR
     public class OTPActivity : AppCompatActivity
     {
         Timer timer;
+        int count = 60;
         public override void OnBackPressed()
         {
-            timer = null;
+            count = -300;
             base.OnBackPressed();
         }
         private string rndm = new Random().Next(0, 99999999).ToString("D8");
@@ -57,7 +58,7 @@ namespace CIBR
 
             timer = new Timer();
             timer.Interval = 1000;
-            int count = 60;
+            
             timer.Elapsed += Timer_Elapsed;
             timer.Start();
 
@@ -65,10 +66,14 @@ namespace CIBR
             {
                 count--;
                 txt_time.Text = count.ToString();
-                if (count <= 0) 
+                if (count <= 0 && count >= -5)
                 {
                     timer.Stop();
                     StartActivity(typeof(ForgotPasswordActivity));
+                }
+                else if (count < -10) 
+                {
+                    timer.Stop();
                 }
             }
 
@@ -95,7 +100,7 @@ namespace CIBR
                                 break;
                             }
                         }
-                        timer = null;
+                        count = -300;
                         StartActivity(typeof(MainActivity));
                     }
                     else
