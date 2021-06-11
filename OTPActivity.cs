@@ -23,10 +23,7 @@ namespace CIBR
         TextView txt_time;
         TextView txt_incorrect;
 
-        public override void OnBackPressed()
-        {
-            return;
-        }
+        
 
         protected override void OnCreate(Bundle savedInstanceState)
         {

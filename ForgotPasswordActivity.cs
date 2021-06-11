@@ -8,7 +8,7 @@ using System;
 
 namespace CIBR
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = false)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = false , NoHistory = true)]
 
     public class ForgotPasswordActivity : AppCompatActivity
     {

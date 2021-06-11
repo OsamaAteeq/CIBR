@@ -6,7 +6,7 @@ using AndroidX.AppCompat.App;
 
 namespace CIBR
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = false)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = false, NoHistory = true)]
 
     public class ForgotUsernameActivity : AppCompatActivity
     {
@@ -59,6 +59,7 @@ namespace CIBR
                             {
                                 //SUPPOSED TO SEND SMS TO USER
                                 System.Console.WriteLine("USERNAME IS : \""+Global.client[at][5]+"\"");
+                                StartActivity(typeof(MainActivity));
                             }
                             else
                                 txt_incorrect.Visibility = Android.Views.ViewStates.Visible;

@@ -116,6 +116,7 @@ namespace CIBR
                     {
                         Global.client[client_at][5] = box_username.Text;
                         Global.client[client_at][6] = box_password.Text;
+                        System.Console.WriteLine("YOUR internet banking account has been created. Do NOT share your user name or password with anyone");
                     }
 
                 }
