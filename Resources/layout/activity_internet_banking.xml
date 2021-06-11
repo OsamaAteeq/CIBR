@@ -153,8 +153,8 @@
                     android:textColor="#ff64b5f6"
                     android:id="@+id/txt_see_all"/>
 
-            </LinearLayout3>
-        </LinearLayout2>
+            </LinearLayout>
+        </LinearLayout>
 
     </GridLayout>
 
