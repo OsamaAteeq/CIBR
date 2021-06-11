@@ -35,7 +35,7 @@ namespace CIBR
 
             txt_incorrect = FindViewById<TextView>(Resource.Id.txt_incorrect);
 
-            FindViewById<Button>(Resource.Id.btn_next).Click += (o, e) =>
+            FindViewById<Button>(Resource.Id.btn_signin).Click += (o, e) =>
             {
                 txt_incorrect.Visibility = Android.Views.ViewStates.Gone;
                 /*
